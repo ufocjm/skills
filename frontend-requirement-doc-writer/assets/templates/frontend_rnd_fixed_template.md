@@ -2,11 +2,13 @@
 
 ## 1. 文档元信息
 
-1. 文档版本：`v1`
-2. 当前状态：`Planned | In Progress | Done（YYYY-MM-DD）`
-3. 负责人：`TODO:`
-4. 创建日期：`YYYY-MM-DD`
-5. 关联需求/工单：`TODO:`
+1. 文档 ID：`DOC-001`
+2. 文档版本：`v1`
+3. 当前状态：`Planned | In Progress | Done（YYYY-MM-DD）`
+4. 负责人：`TODO:`
+5. 创建日期：`YYYY-MM-DD`
+6. 关联需求/工单：`TODO:`
+7. 下游 AI 用途：`代码生成 | 测试生成 | 联调脚本生成 | 评审`
 
 ## 2. 业务背景与目标
 
@@ -23,10 +25,10 @@
 
 ## 4. 范围与非范围
 
-1. 本次范围：
-   1. `TODO:`
-2. 非本次范围：
-   1. `TODO:`
+| REQ-ID | 需求描述 | 范围类型 | 优先级 | 备注 |
+| --- | --- | --- | --- | --- |
+| REQ-001 | TODO | In Scope | P0 | TODO |
+| REQ-999 | TODO | Out of Scope | P2 | TODO |
 
 ## 5. 用户角色与使用场景
 
@@ -36,44 +38,41 @@
 
 ## 6. 页面流程与交互说明
 
-1. 页面入口：`TODO:`
-2. 关键流程图/步骤：`TODO:`
-3. 状态流转：`TODO:`
-4. 交互约束：`TODO:`
+| FLOW-ID | 页面/入口 | 前置条件 | 用户动作 | 系统响应 | 异常分支 |
+| --- | --- | --- | --- | --- | --- |
+| FLOW-001 | TODO | TODO | TODO | TODO | TODO |
 
 ## 7. 列表与按钮定义
 
-| 按钮/操作 | 位置 | 显示条件 | 禁用条件 | 权限 | 点击动作 | 副作用 | 失败反馈 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO |
+| BTN-ID | 按钮/操作 | 位置 | 显示条件 | 禁用条件 | 权限 | 点击动作 | 副作用 | 失败反馈 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BTN-001 | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO |
 
 ## 8. 接口与字段映射
 
 ### 8.1 接口清单
 
-| 接口 | 方法 | 用途 | 负责人 | 文档位置 |
-| --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO |
+| API-ID | 接口 | 方法 | 用途 | 负责人 | 文档位置 |
+| --- | --- | --- | --- | --- | --- |
+| API-001 | TODO | TODO | TODO | TODO | TODO |
 
 ### 8.2 字段映射
 
-| 字段名 | 类型 | 必填 | 枚举/范围 | 业务含义 | 前端用途 | 空值语义 |
-| --- | --- | --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | TODO | TODO |
+| API-ID | 字段名 | 类型 | 必填 | 枚举/范围 | 业务含义 | 前端用途 | 空值语义 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| API-001 | TODO | string/int/boolean/... | true/false | TODO | TODO | TODO | TODO |
 
 ## 9. 字段展示与校验规则
 
-| 字段名 | 展示组件 | 展示格式 | 校验规则 | 异常处理 | 脱敏/权限 |
-| --- | --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | TODO |
+| FIELD-ID | 字段名 | 展示组件 | 展示格式 | 校验规则 | 异常处理 | 脱敏/权限 |
+| --- | --- | --- | --- | --- | --- | --- |
+| FIELD-001 | TODO | TODO | TODO | TODO | TODO | TODO |
 
 ## 10. 异常处理与边界条件
 
-1. 空数据：`TODO:`
-2. 非法值：`TODO:`
-3. 超时/重试：`TODO:`
-4. 并发/重复提交：`TODO:`
-5. 权限不足：`TODO:`
+| ERR-ID | 场景 | 触发条件 | 处理策略 | 用户提示 | 可恢复性 |
+| --- | --- | --- | --- | --- | --- |
+| ERR-001 | TODO | TODO | TODO | TODO | YES/NO |
 
 ## 11. 非功能要求
 
@@ -98,13 +97,13 @@
 
 ### 12.3 阶段二：前端实现任务拆解
 
-1. 页面任务：
-   1. `任务ID / 负责人 / 输入 / 输出 / 完成定义`
-2. 组件任务：
-   1. `任务ID / 负责人 / 输入 / 输出 / 完成定义`
-3. 状态管理任务：
-   1. `任务ID / 负责人 / 输入 / 输出 / 完成定义`
-4. 阶段门禁：`TODO:`
+| TASK-ID | 任务类型 | 负责人 | 依赖任务 | 输入 | 输出 | 完成定义 |
+| --- | --- | --- | --- | --- | --- | --- |
+| TASK-001 | 页面开发 | TODO | 无 | REQ-001 | 页面代码 | 构建通过 + 自测通过 |
+| TASK-002 | 组件开发 | TODO | TASK-001 | REQ-001 | 组件代码 | 单测通过 |
+| TASK-003 | 状态管理 | TODO | TASK-001 | API-001 | 状态流实现 | 集成测试通过 |
+
+1. 阶段门禁：`TODO:`
 
 ### 12.4 阶段三：接口联调
 
@@ -141,21 +140,96 @@
 
 ## 13. 验收标准
 
-| 验收ID | 需求项ID | 前置条件 | 操作步骤 | 预期结果 | 覆盖接口/字段 |
+| TEST-ID | 需求项ID | 前置条件 | 操作步骤 | 预期结果 | 覆盖接口/字段 |
 | --- | --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | TODO |
+| TEST-001 | REQ-001 | TODO | TODO | TODO | API-001/FIELD-001 |
 
 ## 14. 风险与回滚方案
 
-| 风险ID | 风险描述 | 影响范围 | 触发条件 | 应对策略 | 状态 |
+| RISK-ID | 风险描述 | 影响范围 | 触发条件 | 应对策略 | 状态 |
 | --- | --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | Open |
+| RISK-001 | TODO | TODO | TODO | TODO | Open |
 
 ## 15. 待确认问题（必须答复）
 
-1. `TODO:`
-2. `TODO:`
+| Q-ID | 问题描述 | 阻断级别 | 关联对象 | 责任人 | 截止时间 |
+| --- | --- | --- | --- | --- | --- |
+| Q-001 | TODO | BLOCKER/NON-BLOCKER | REQ-001/API-001/TASK-001 | TODO | YYYY-MM-DD |
 
 ## 16. 变更记录
 
 1. `YYYY-MM-DD`：初始化文档模板。
+
+### 16.1 机器可解析附录（强制）
+
+```json
+{
+  "metadata": {
+    "doc_id": "DOC-001",
+    "version": "v1",
+    "status": "Planned",
+    "target_ai_usage": ["代码生成", "测试生成"]
+  },
+  "requirements": [
+    {
+      "req_id": "REQ-001",
+      "title": "TODO",
+      "scope": "in_scope",
+      "priority": "P0",
+      "related_flows": ["FLOW-001"],
+      "related_apis": ["API-001"],
+      "related_tests": ["TEST-001"]
+    }
+  ],
+  "apis": [
+    {
+      "api_id": "API-001",
+      "path": "TODO",
+      "method": "GET",
+      "fields": [
+        {
+          "field_id": "FIELD-001",
+          "name": "TODO",
+          "type": "string",
+          "required": true,
+          "enum": [],
+          "nullable": false
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "TASK-001",
+      "type": "页面开发",
+      "depends_on": [],
+      "input": ["REQ-001"],
+      "output": ["页面代码"],
+      "done_definition": ["构建通过", "自测通过"]
+    }
+  ],
+  "tests": [
+    {
+      "test_id": "TEST-001",
+      "req_id": "REQ-001",
+      "steps": ["TODO"],
+      "assertions": ["TODO"]
+    }
+  ],
+  "risks": [
+    {
+      "risk_id": "RISK-001",
+      "level": "high",
+      "status": "open",
+      "mitigation": "TODO"
+    }
+  ],
+  "open_questions": [
+    {
+      "q_id": "Q-001",
+      "blocking_level": "BLOCKER",
+      "question": "TODO"
+    }
+  ]
+}
+```
