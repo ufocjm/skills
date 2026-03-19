@@ -41,6 +41,8 @@ python3 scripts/main.py --resume-path /tmp/qwnull-media-search.xxxxx/session.jso
 7. For play pages, prefer `player_aaaa.url` over visible DOM guesses.
 8. Stream resolution is best effort. Preserve `play_page_url` even when `stream_url` is unavailable.
 9. `--resolve-streams first` is the default to keep live requests bounded. Use `all` only when the user explicitly wants every play entry resolved.
+10. `--detail-workers` and `--play-workers` control the thread-pool size for detail-page and play-page fetches.
+11. In concurrent runs, some `*_total_ms` values are cumulative task time, so they may be larger than `total_ms`, which is the real wall-clock time.
 
 ## Commands
 
@@ -66,6 +68,12 @@ Resolve every play-page stream instead of the first entry per source:
 
 ```bash
 python3 scripts/main.py --keyword "复仇者联盟" --phpsessid "<session>" --resolve-streams all
+```
+
+Tune concurrency explicitly:
+
+```bash
+python3 scripts/main.py --keyword "叶问3" --phpsessid "<session>" --detail-workers 4 --play-workers 6
 ```
 
 ## Output Contract
