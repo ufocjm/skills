@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwnull Media Search"
+  short_description: "Search qwnull media, resolve details, downloads, and streams"
+  default_prompt: "Use $qwnull-media-search to search qwnull by keyword, optionally reuse a PHPSESSID, and return details, downloads, pan links, and playable stream info."
